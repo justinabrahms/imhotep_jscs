@@ -24,7 +24,7 @@ class PyTest(TestCommand):
 
 setup(
     name='imhotep_jscs',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     url='https://github.com/justinabrahms/imhotep_jscs',
     license='MIT',
