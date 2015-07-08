@@ -10,7 +10,7 @@ class JSCSTest(TestCase):
             mock_op.join.return_value = '/tmp/foo.js'
             mock_op.exists.return_value = False
             cmd = plugin.get_command('/tmp')
-            self.assertTrue('-p airbnb' in cmd)
+            self.assertEqual('jscs -r inline -p airbnb', cmd)
 
     def test_command_returns_config_if_available(self):
         plugin = JSCS(None)
@@ -20,5 +20,4 @@ class JSCSTest(TestCase):
             mock_op.exists.return_value = True
             cmd = plugin.get_command('/tmp')
 
-            self.assertTrue('-c' in cmd)
-            self.assertTrue(path in cmd)
+            self.assertEqual('jscs -r inline -c /tmp/.jscsrc', cmd)

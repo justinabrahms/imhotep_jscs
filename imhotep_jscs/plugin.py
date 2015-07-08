@@ -15,7 +15,7 @@ class JSCS(Tool):
         # If we have a config, use it. Otherwise, use airbnb style.
         config_path = os.path.join(dirname, '.jscsrc')
         if os.path.exists(config_path):
-            cmd += '-c %s' % config_path
+            cmd += ' -c %s' % config_path
         else:
-            cmd += '-p airbnb'
+            cmd += ' -p airbnb'
         return cmd
