@@ -1,1 +1,3 @@
 *.pyc
+/.eggs/
+/imhotep_jscs.egg-info/
