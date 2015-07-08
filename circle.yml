@@ -4,4 +4,4 @@ dependencies:
 
 test:
   override:
-    - py.test .
+    - py.test imhotep_jscs
